@@ -17,7 +17,7 @@ const UnlockVault = () => {
     setLoading(true);
 
     try {
-      const res = await axiosInstance.post('http://localhost:3000/api/vault/openvault', { password });
+      const res = await axiosInstance.post('https://privguardbyaniket-1.onrender.com/api/vault/openvault', { password });
       toast.success(res.data.message || 'Vault unlocked!');
 
       // Dispatch the action to update the vault status in Redux
